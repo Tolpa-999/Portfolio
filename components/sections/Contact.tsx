@@ -8,9 +8,6 @@ import { SiGithub } from 'react-icons/si'
 import { FaLinkedin, FaEnvelope } from 'react-icons/fa'
 
 interface FormData {
-  name: string
-  email: string
-  subject: string
   message: string
 }
 
@@ -20,9 +17,6 @@ interface FormData {
  */
 export function Contact() {
   const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    subject: '',
     message: ''
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -36,17 +30,17 @@ export function Contact() {
     // Simulate form submission (replace with actual email service)
     await new Promise(resolve => setTimeout(resolve, 1500))
 
-    // Create mailto link for email client
-    const mailtoLink = `mailto:mahmudtolpa666@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
-    )}`
+    // Create mailto link for email client with default values
+    const subject = 'Interested'
+    const body = formData.message
+    const mailtoLink = `mailto:mahmudtolpa666@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
 
     // Open email client
     window.location.href = mailtoLink
 
     setIsSubmitting(false)
     setSubmitStatus('success')
-    setFormData({ name: '', email: '', subject: '', message: '' })
+    setFormData({ message: '' })
 
     // Reset success message after 5 seconds
     setTimeout(() => setSubmitStatus('idle'), 5000)
@@ -145,55 +139,6 @@ export function Contact() {
           <ScrollReveal delay={0.2}>
             <Card glow="cyan">
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-text mb-2">
-                      Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      value={formData.name}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 bg-surface border border-surface-700/50 rounded-lg text-text placeholder-muted/50 focus:outline-none focus:border-accent/50 transition-colors duration-300"
-                      placeholder="Your name"
-                    />
-                  </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-text mb-2">
-                    Your Email *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-surface border border-surface-700/50 rounded-lg text-text placeholder-muted/50 focus:outline-none focus:border-cta/50 transition-colors duration-300"
-                    placeholder="your@email.com"
-                  />
-                </div>
-                </div>
-
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-text mb-2">
-                    Subject *
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    required
-                    value={formData.subject}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-surface border border-surface-700/50 rounded-lg text-text placeholder-muted/50 focus:outline-none focus:border-cta/50 transition-colors duration-300"
-                    placeholder="Project inquiry, collaboration, etc."
-                  />
-                </div>
-
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-text mb-2">
                     Message *
@@ -204,7 +149,7 @@ export function Contact() {
                     required
                     value={formData.message}
                     onChange={handleChange}
-                    rows={6}
+                    rows={8}
                     className="w-full px-4 py-3 bg-surface border border-surface-700/50 rounded-lg text-text placeholder-muted/50 focus:outline-none focus:border-cta/50 transition-colors duration-300 resize-none"
                     placeholder="Tell me about your project or idea..."
                   />
