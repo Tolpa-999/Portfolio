@@ -6,7 +6,7 @@ import { SiGithub } from 'react-icons/si'
 
 /**
  * Final CTA section for conversion.
- * Clean, centered layout with primary and secondary actions.
+ * Clean, centered layout with primary and secondary actions including CV download.
  */
 export function CTA() {
   return (
@@ -28,10 +28,10 @@ export function CTA() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Button variant="primary" size="lg" className="text-lg flex items-center gap-2">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="fill-current">
-                <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.89-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.11-.9-2-2-2zm0 16H5V9h14v11zM7 11h5v5H7v-5z"/>
+                <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.89-1.99.2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.11-.9-2-2zm0 16H5V9h14v11zM7 11h5v5H7v-5z"/>
               </svg>
               Book a Strategy Call
             </Button>
@@ -44,6 +44,21 @@ export function CTA() {
               <SiGithub size={20} />
               View GitHub
             </Button>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.3}>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8 border-t border-surface-700/30">
+            <a
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-cta text-primary font-medium hover:bg-cta/90 transition-colors duration-300 hover:scale-[1.02] hover:shadow-[0_0_24px_rgba(251,191,36,0.2)]"
+              href="/TolpaCV.pdf"
+              download
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="fill-current">
+                <path d="M14 2h4v-3a2 2h-4v-5a2 2h-2v-12l-2 4-2v-10l4-2 4-2v-14h14z"/>
+              </svg>
+              Download CV
+            </a>
           </div>
         </ScrollReveal>
 

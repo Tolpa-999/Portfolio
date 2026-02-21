@@ -18,7 +18,7 @@ interface CaseStudy {
 /**
  * Case Studies section featuring selected work.
  * Each case follows a structured teardown format.
- * Supports optional project images placed in /public/images/{imageName}
+ * Supports optional full-width project images.
  */
 export function CaseStudies() {
   const cases: CaseStudy[] = [
@@ -149,33 +149,35 @@ export function CaseStudies() {
           </p>
         </ScrollReveal>
 
-        <div className="space-y-8">
+        <div className="space-y-12">
           {cases.map((caseStudy, index) => (
             <ScrollReveal key={index} delay={index * 0.1}>
               <Card glow="cyan" hover={true} className="group">
                 <div className="space-y-6">
                   {/* Project header with icon and optional image */}
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-surface border border-accent/20 flex items-center justify-center">
-                      <caseStudy.icon size={24} className="text-accent" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl md:text-2xl font-bold text-text mb-1 font-sans">
-                        {caseStudy.name}
-                      </h3>
-                      <p className="text-accent text-sm font-mono">
-                        {caseStudy.descriptor}
-                      </p>
+                  <div className="flex flex-col md:flex-row items-start gap-4">
+                    <div className="flex items-start gap-4 flex-shrink-0">
+                      <div className="w-14 h-14 rounded-lg bg-surface border border-accent/20 flex items-center justify-center flex-shrink-0">
+                        <caseStudy.icon size={24} className="text-accent" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl md:text-2xl font-bold text-text mb-1 font-sans">
+                          {caseStudy.name}
+                        </h3>
+                        <p className="text-accent text-sm font-mono">
+                          {caseStudy.descriptor}
+                        </p>
+                      </div>
                     </div>
                   </div>
 
-                  {/* Optional project image */}
+                  {/* Optional full-width project image */}
                   {caseStudy.image && (
-                    <div className="w-full h-48 rounded-lg overflow-hidden bg-surface">
+                    <div className="w-full rounded-xl overflow-hidden bg-surface border border-surface-700/50 -mt-4">
                       <img
                         src={caseStudy.image}
                         alt={`${caseStudy.name} project screenshot`}
-                        className="w-full h-full object-cover"
+                        className="w-full h-64 md:h-80 object-cover"
                         loading="lazy"
                       />
                     </div>
