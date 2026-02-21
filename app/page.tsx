@@ -8,6 +8,7 @@ import { CaseStudies } from '@/components/sections/CaseStudies'
 import { SystemsThinking } from '@/components/sections/SystemsThinking'
 import { MVPPhilosophy } from '@/components/sections/MVPPhilosophy'
 import { TechStack } from '@/components/sections/TechStack'
+import { Contact } from '@/components/sections/Contact'
 import { CTA } from '@/components/sections/CTA'
 import { Footer } from '@/components/sections/Footer'
 
@@ -26,6 +27,7 @@ export default function Home() {
       <SystemsThinking />
       <MVPPhilosophy />
       <TechStack />
+      <Contact />
       <CTA />
       <Footer />
     </main>

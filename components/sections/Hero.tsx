@@ -52,12 +52,16 @@ export function Hero() {
 
             <ScrollReveal delay={0.3}>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button variant="primary" size="lg">
-                  View Case Studies
+                <Button variant="primary" size="lg" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+                  Contact Me
                 </Button>
-                <Button variant="outline" size="lg">
-                  Book a Strategy Call
-                </Button>
+                <a
+                  href="/TolpaCV.pdf"
+                  download
+                  className="inline-flex items-center justify-center font-medium rounded-lg transition-all duration-300 px-8 py-4 text-lg bg-transparent border border-cta/50 text-cta hover:bg-cta/10 hover:border-cta"
+                >
+                  Download CV
+                </a>
               </div>
             </ScrollReveal>
           </div>

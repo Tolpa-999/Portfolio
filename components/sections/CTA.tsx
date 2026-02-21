@@ -15,12 +15,12 @@ export function CTA() {
       <div className="absolute inset-0 bg-gradient-to-b from-primary via-surface/20 to-primary" />
 
       {/* Accent glow effect */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-accent/5 rounded-full blur-3xl -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-cta/5 rounded-full blur-3xl -z-10" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <ScrollReveal>
           <h2 className="text-3xl md:text-5xl font-bold font-sans tracking-tight mb-6">
-            Ready to Build Your SaaS the Right Way?
+            Ready to Start Your Project?
           </h2>
           <p className="text-lg md:text-xl text-muted mb-10 max-w-2xl mx-auto">
             Let's turn your idea into a scalable, revenue-generating system.
@@ -29,41 +29,31 @@ export function CTA() {
 
         <ScrollReveal delay={0.2}>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button variant="primary" size="lg" className="text-lg flex items-center gap-2">
+            <Button
+              variant="primary"
+              size="lg"
+              className="text-lg flex items-center gap-2"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="fill-current">
                 <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.89-1.99.2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.11-.9-2-2zm0 16H5V9h14v11zM7 11h5v5H7v-5z"/>
               </svg>
-              Book a Strategy Call
+              Get in Touch
             </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="text-lg flex items-center gap-2"
-              href="https://github.com/tolpa"
+            <a
+              href="https://github.com/Tolpa-999"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center font-medium rounded-lg transition-all duration-300 px-8 py-4 text-lg bg-transparent border border-cta/50 text-cta hover:bg-cta/10 hover:border-cta gap-2"
             >
               <SiGithub size={20} />
               View GitHub
-            </Button>
-          </div>
-        </ScrollReveal>
-
-        <ScrollReveal delay={0.3}>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8 border-t border-surface-700/30">
-            <a
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-cta text-primary font-medium hover:bg-cta/90 transition-colors duration-300 hover:scale-[1.02] hover:shadow-[0_0_24px_rgba(251,191,36,0.2)]"
-              href="/TolpaCV.pdf"
-              download
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="fill-current">
-                <path d="M14 2h4v-3a2 2h-4v-5a2 2h-2v-12l-2 4-2v-10l4-2 4-2v-14h14z"/>
-              </svg>
-              Download CV
             </a>
           </div>
         </ScrollReveal>
 
-        <ScrollReveal delay={0.4}>
-          <p className="text-sm text-muted mt-8">
+        <ScrollReveal delay={0.3}>
+          <p className="text-sm text-muted">
             I turn business ideas into scalable SaaS platforms that generate
             revenue.
           </p>
