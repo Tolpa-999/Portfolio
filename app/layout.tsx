@@ -35,9 +35,14 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'Tolpa | Full-Stack Systems Engineer',
+  title: 'Tolpa | Full-Stack Engineer',
   description: 'I turn business ideas into scalable SaaS platforms that generate revenue. Multi-tenant architecture, high-converting systems, fast MVP launches, production-ready infrastructure.',
   keywords: ['Full-Stack Developer', 'Multi-tenant SaaS', 'Next.js', 'PostgreSQL', 'Systems Engineer'],
+  icons: {
+    icon: '/icon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
   openGraph: {
     title: 'Tolpa | Full-Stack Engineer',
     description: 'I turn business ideas into scalable SaaS platforms that generate revenue.',

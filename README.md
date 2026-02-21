@@ -1,6 +1,6 @@
 # Tolpa Portfolio
 
-A premium, performance-first portfolio website for Tolpa — SaaS Architect & Full-Stack Systems Engineer.
+A premium, performance-first portfolio website for Tolpa — SaaS Architect & Full-Stack s Engineer.
 
 ## Features
 
