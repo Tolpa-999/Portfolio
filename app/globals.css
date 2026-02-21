@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-primary text-text font-body antialiased;
+  }
+
+  /* Custom scrollbar for subtle refinement */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-primary;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-surface/50 rounded;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-accent/30;
+  }
+}
+
+@layer utilities {
+  /* Subtle grid pattern background */
+  .grid-pattern {
+    background-image:
+      linear-gradient(to right, rgba(34, 211, 238, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(34, 211, 238, 0.03) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  /* Subtle text selection */
+  ::selection {
+    @apply bg-accent/20 text-accent;
+  }
+}
