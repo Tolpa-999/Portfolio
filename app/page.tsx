@@ -17,7 +17,7 @@ import { Footer } from '@/components/sections/Footer'
  */
 export default function Home() {
   return (
-    <main className="min-h-screen bg-primary">
+    <main className="min-h-screen bg-primary overflow-x-hidden">
       <Hero />
       <Tools />
       <Metrics />

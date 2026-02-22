@@ -24,7 +24,7 @@ export function Hero() {
           <div className="space-y-8">
             <ScrollReveal>
               <motion.div
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-accent/20 bg-accent/5 mb-4"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-accent/20 bg-accent/5 mb-3"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
@@ -209,7 +209,7 @@ export function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <ScrollReveal delay={0.8} className="absolute bottom-8 left-1/2 -translate-x-1/2">
+      <ScrollReveal delay={0.8} className="absolute bottom-9 left-1/2 -translate-x-1/2">
         <motion.div
           className="flex flex-col items-center gap-2 text-muted"
           animate={{ y: [0, 8, 0] }}

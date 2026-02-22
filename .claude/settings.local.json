@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install)",
+      "Bash(npm run build:*)",
+      "Bash(npx react-icons-cli:*)",
+      "Bash(npm ls:*)"
+    ]
+  }
+}
