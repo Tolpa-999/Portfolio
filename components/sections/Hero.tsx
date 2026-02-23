@@ -22,19 +22,6 @@ export function Hero() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left side - Content */}
           <div className="space-y-8">
-            <ScrollReveal>
-              <motion.div
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-accent/20 bg-accent/5 mb-3"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
-              >
-                <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-                <span className="text-sm text-accent font-medium">
-                  2+ Years Experience
-                </span>
-              </motion.div>
-            </ScrollReveal>
 
             <ScrollReveal delay={0.1}>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-sans tracking-tighter leading-tight">
